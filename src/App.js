@@ -2,19 +2,29 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+const welcome = 'Hi I am Robby'
+
 class App extends Component {
   render() {
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Hello</h1>
+          <Welcome/>
         </header>
         <p className="App-intro">
           Robby <code>src/App.js</code> and save to reload.
         </p>
       </div>
     ); 
+  }
+}
+
+class Welcome extends Component{
+  render(){
+    return(
+      <h1 className="App-title">{welcome}</h1>
+    )
   }
 }
 
