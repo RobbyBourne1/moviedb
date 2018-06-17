@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-const welcome = 'Hi I am Robby'
+
 
 class App extends Component {
   render() {
@@ -10,7 +10,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <Welcome/>
+          <Welcome text='Hi this is a prop'/>
         </header>
         <p className="App-intro">
           Robby <code>src/App.js</code> and save to reload.
@@ -22,8 +22,9 @@ class App extends Component {
 
 class Welcome extends Component{
   render(){
+    const { text } = this.props
     return(
-      <h1 className="App-title">{welcome}</h1>
+      <h1 className="App-title">{text}</h1>
     )
   }
 }
